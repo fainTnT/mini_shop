@@ -1,0 +1,19 @@
+.tabbar {
+  width:100%;
+  height:80rpx;
+  display:flex;
+}
+.tabbar .title {
+  flex:1;
+  box-sizing: border-box;
+  height:100%;
+  line-height:80rpx;
+  text-align: center;
+}
+.active {
+  color: #ff5777;
+}
+.active .content {
+  padding:18rpx 18rpx;
+  border-bottom:6rpx solid #ff5777;
+}

@@ -1,0 +1,9 @@
+<view class='tabbar'>
+  <view wx:for='{{tabTitle}}' 
+        wx:key='index' 
+        class='title {{currentIndex === index ? "active":""}}' 
+        bind:tap='tabbarClick'
+        data-currentIndex='{{index}}'>
+        <text class='content'>{{item}}</text>
+  </view>
+</view>

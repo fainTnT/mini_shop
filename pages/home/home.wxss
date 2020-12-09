@@ -1,1 +1,3 @@
-/* pages/home/home.wxss */
+.homeSwiper {
+  height:400rpx
+}

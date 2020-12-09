@@ -1,2 +1,8 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 轮播图 -->
+<y-swiper list="{{banners}}" home-class='homeSwiper'></y-swiper>
+<!-- 推荐 -->
+<y-recommend recommends='{{recommends}}'></y-recommend>
+<!-- 本周流行 -->
+<y-popular></y-popular>
+<!-- 选项切换 -->
+<y-tab tabTitle='{{titles}}' bind:tabClick='homeTabClick'></y-tab>
