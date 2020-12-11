@@ -1,0 +1,13 @@
+<view class='goods'>
+  <block wx:for="{{goods}}" wx:key='index'>
+    <view class='goods-item'>
+      <image src='{{item.show.img}}' class='image' mode='widthFix'></image>
+      <view class='title'>{{item.title}}</view>
+      <view class='desc'>
+        <text class='price'>￥{{item.price}}</text>
+        <image class='cfavImg' src='/assets/common/collect.svg'></image>
+        <text class='cfav'>{{item.cfav}}</text>
+      </view>
+    </view>
+  </block>
+</view>

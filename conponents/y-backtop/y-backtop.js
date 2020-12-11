@@ -1,4 +1,4 @@
-// pages/home/childCpns/y-popular/y-popular.js
+// conponents/y-backtop/y-backtop.js
 Component({
   /**
    * 组件的属性列表
@@ -18,6 +18,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
+    backtopClick(){
+      wx.pageScrollTo({
+        duration: 300,
+        scrollTop:0
+      })
+    }
   }
 })

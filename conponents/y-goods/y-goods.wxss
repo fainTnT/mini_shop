@@ -1,0 +1,36 @@
+.goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  margin-top:20rpx;
+}
+.goods-item {
+  width:45%;
+  font-size:28rpx;
+  color:#666;
+  position: relative;
+  padding-bottom:80rpx;
+}
+.goods-item .image {
+  width:100%;
+  border-radius:10rpx;
+}
+.goods-item .title {
+  width:100%;
+  bottom:46rpx;
+  position: absolute;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow: hidden;
+}
+.goods-item .desc {
+  width:100%;
+  bottom:10rpx;
+  position: absolute;
+  text-align: center;
+}
+.goods-item .cfavImg {
+  width:28rpx;
+  height:28rpx;
+  margin-left:10rpx;
+}

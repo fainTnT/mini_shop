@@ -1,0 +1,3 @@
+<view class='backtop' bind:tap='backtopClick'>
+  <image class='back-img' src="/assets/common/top.png"></image>
+</view>

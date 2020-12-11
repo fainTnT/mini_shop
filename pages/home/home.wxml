@@ -1,8 +1,13 @@
 <!-- 轮播图 -->
-<y-swiper list="{{banners}}" home-class='homeSwiper'></y-swiper>
+<y-swiper list="{{banners}}" home-class='homeSwiper' bind:imgLoad='homeImgLoad'></y-swiper>
 <!-- 推荐 -->
 <y-recommend recommends='{{recommends}}'></y-recommend>
 <!-- 本周流行 -->
 <y-popular></y-popular>
 <!-- 选项切换 -->
-<y-tab tabTitle='{{titles}}' bind:tabClick='homeTabClick'></y-tab>
+<y-tab tabTitle='{{titles}}' bind:tabClick='homeTabClick' id='tabbar' class="{{isShowTab?'tabFixed':''}}"></y-tab>
+<y-tab tabTitle='{{titles}}' bind:tabClick='homeTabClick' id='tabbar' wx:if='{{isShowTab}}'></y-tab>
+<!-- 商品展示 -->
+<y-goods goods="{{goodsData[currentType].list}}"></y-goods>
+<!-- 回到顶部 -->
+<y-backtop wx:if='{{isShowBack}}'></y-backtop>

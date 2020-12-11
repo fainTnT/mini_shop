@@ -1,5 +1,7 @@
 {
   "usingComponents": {
+    "y-backtop":"/conponents/y-backtop/y-backtop",
+    "y-goods":"/conponents/y-goods/y-goods",
     "y-tab":"/conponents/y-tab/y-tab",
     "y-swiper":"/conponents/y-swiper/y-swiper",
     "y-recommend":"./childCpns/y-recommend/y-recommend",
