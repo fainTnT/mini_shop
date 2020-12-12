@@ -1,13 +1,15 @@
 <view class='goods'>
   <block wx:for="{{goods}}" wx:key='index'>
-    <view class='goods-item'>
-      <image src='{{item.show.img}}' class='image' mode='widthFix'></image>
-      <view class='title'>{{item.title}}</view>
-      <view class='desc'>
-        <text class='price'>￥{{item.price}}</text>
-        <image class='cfavImg' src='/assets/common/collect.svg'></image>
-        <text class='cfav'>{{item.cfav}}</text>
+    <navigator url='/pages/detail/detail?id={{item.iid}}' class='goods-item'>
+      <view >
+        <image src='{{item.show.img||item.image}}' class='image' mode='widthFix'></image>
+        <view class='title'>{{item.title}}</view>
+        <view class='desc'>
+          <text class='price' style="color:#ff5777">￥{{item.price}}</text>
+          <image class='cfavImg' src='/assets/common/collect.svg'></image>
+          <text class='cfav' style="color:#ff5777">{{item.cfav}}</text>
+        </view>
       </view>
-    </view>
+    </navigator>
   </block>
 </view>

@@ -1,0 +1,11 @@
+<view wx:if="{{Object.keys(detailInfo).length !== 0}}" class="goods-info">
+  <view class="info-desc clear-fix">
+    <view class="start"></view>
+    <view class="desc">{{detailInfo.desc}}</view>
+    <view class="end"></view>
+  </view>
+  <view class="info-key">{{detailInfo.detailImage[0].key}}</view>
+  <view class="info-list">
+    <image wx:for="{{detailInfo.detailImage[0].list}}" src="{{item}}" class='image' wx:key='index' mode='widthFix'/>
+  </view>
+</view>

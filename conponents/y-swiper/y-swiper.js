@@ -10,7 +10,9 @@ Component({
 
   },
   methods: {
-
+    swiperLoad(){
+      this.triggerEvent('swiperLoad',{})
+    }
   },
   externalClasses:['home-class']
 })

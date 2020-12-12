@@ -1,0 +1,5 @@
+<view class="recommend-info">
+    <view class="info-header">热门推荐</view>
+    <y-goods goods='{{recommendList}}'></y-goods>
+</view>
+

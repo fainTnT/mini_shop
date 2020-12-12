@@ -1,0 +1,22 @@
+
+<view wx:if="{{isShowComment}}" class="comment-info">
+  <view class="info-header">
+    <view class="header-title">用户评价</view>
+    <view class="header-more">更多></view>
+  </view>
+  <view class="info-user">
+    <image src="{{commentInfo.user.avatar}}" class='image1'/>
+    <text class='text1'>{{commentInfo.user.uname}}</text>
+  </view>
+  <view class="info-detail">
+    <view class='text2'>{{commentInfo.content}}</view>
+    <view class="info-other">
+      <text class="date">{{timer}}</text>
+      <text>{{commentInfo.style}}</text>
+    </view>
+    <view class="info-imgs">
+      <image src="{{item}}" wx:for="{{commentInfo.images}}" class='image2' wx:key='index'/>
+    </view>
+  </view>
+</view>
+

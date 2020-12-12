@@ -1,0 +1,10 @@
+.recommend-info {
+  padding: 10rpx;
+}
+
+.info-header {
+  line-height: 80rpx;
+  padding-left: 16rpx;
+  font-size: 30rpx;
+  color: #333;
+}

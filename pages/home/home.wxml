@@ -1,5 +1,5 @@
 <!-- 轮播图 -->
-<y-swiper list="{{banners}}" home-class='homeSwiper' bind:imgLoad='homeImgLoad'></y-swiper>
+<y-swiper list="{{banners}}" home-class='homeSwiper' bind:swiperLoad='homeSwiperLoad'></y-swiper>
 <!-- 推荐 -->
 <y-recommend recommends='{{recommends}}'></y-recommend>
 <!-- 本周流行 -->

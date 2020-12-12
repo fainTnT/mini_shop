@@ -1,0 +1,16 @@
+<!-- 轮播图 -->
+<y-detail-swiper list='{{swiperImg}}'></y-detail-swiper>
+<!-- 商品基本信息 -->
+<y-detail-base goods="{{goods}}"></y-detail-base>
+<!-- 店铺信息 -->
+<y-detail-shop shop='{{shop}}'></y-detail-shop>
+<!-- 商品图片展示 -->
+<y-detail-info detailInfo='{{detailInfo}}'></y-detail-info>
+<!-- 商品评论 -->
+<y-detail-comment commentInfo="{{commentInfo}}"></y-detail-comment>
+<!-- 推荐 -->
+<y-detail-recommend  recommendList="{{recommendList}}"></y-detail-recommend>
+<!-- 回到顶部 -->
+<y-backtop wx:if='{{isShowBack}}'></y-backtop>
+<!-- 底部加入购物车 -->
+<y-detail-bar></y-detail-bar>  

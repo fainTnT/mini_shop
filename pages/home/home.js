@@ -15,7 +15,8 @@ Page({
     isShowBack: false,
     topDistance:1000,
     tabTop:0,
-    isShowTab:false
+    isShowTab:false,
+    swiperFlag:true
   },
   onLoad: function (options) {
     // 获取首页轮播图与推荐的数据并保存
@@ -24,16 +25,6 @@ Page({
     this._getHomeGoodsdata('pop');
     this._getHomeGoodsdata('new');
     this._getHomeGoodsdata('sell');
-  },
-  onShow:function(options){
-    // 获取组件距离顶部的位置
-    setTimeout(()=> {
-      wx.createSelectorQuery().select('#tabbar').boundingClientRect(rect => {
-            this.setData({
-              tabTop:rect.top
-            })
-          }).exec();
-    },400)
   },
   // -----------------------发送网络请求的函数----------------------
   _getHomeMultidata(){
@@ -71,6 +62,17 @@ Page({
         currentIndex:event.detail.index,
         currentType:type[event.detail.index]
       })
+    }
+  },
+  homeSwiperLoad(){
+    if(this.data.swiperFlag){
+      // 获取tab组件离顶部的距离
+      wx.createSelectorQuery().select('#tabbar').boundingClientRect(rect => {
+        this.setData({
+          tabTop:rect.top
+        })
+      }).exec();
+      this.data.swiperFlag = false;
     }
   },
   onReachBottom: function() {

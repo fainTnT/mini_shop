@@ -1,0 +1,20 @@
+<view class="bottom-bar">
+  <view class="bar-item bar-left">
+    <view class='box'>
+      <view class="text">客服</view>
+      <image src='/assets/detail/kefu.png' class='image'></image>
+    </view>
+    <view class='box'>
+      <view class="text">店铺</view>
+      <image src='/assets/detail/dianpu.png' class='image'></image>
+    </view>
+    <view class='box'>
+      <view class="text">收藏</view>
+      <image src='/assets/detail/shoucang.png' class='image'></image>
+    </view>
+  </view>
+  <view class="bar-item bar-right">
+    <view class="cart" bind:tap='cartClick'>加入购物车</view>
+    <view class="buy">购买</view>
+  </view>
+</view>

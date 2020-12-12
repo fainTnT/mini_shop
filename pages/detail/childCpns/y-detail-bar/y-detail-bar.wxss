@@ -1,0 +1,40 @@
+.bottom-bar {
+  height: 116rpx;
+  position: fixed;
+  background-color: #eee;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  text-align: center;
+  z-index:2;
+}
+.bar-item {
+  flex: 1;
+  display: flex;
+}
+.bar-item>.box {
+  margin-top:4rpx;
+  flex: 1;
+}
+.bar-left .text {
+  font-size: 26rpx;
+}
+.bar-right {
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 116rpx;
+}
+.bar-right .cart {
+  width:50%;
+  background-color: #ffe817;
+  color: #333;
+}
+.bar-right .buy {
+  width:50%;
+  background-color: #f69;
+}
+.image {
+  width:60rpx;
+  height:60rpx;
+}
