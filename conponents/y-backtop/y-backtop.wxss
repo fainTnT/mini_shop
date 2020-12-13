@@ -3,7 +3,7 @@
   z-index:1;
   width:100rpx;
   height:100rpx;
-  bottom:40rpx;
+  bottom:84rpx;
   right:20rpx;
 }
 .backtop .back-img {

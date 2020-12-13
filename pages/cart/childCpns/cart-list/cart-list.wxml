@@ -1,0 +1,21 @@
+<view wx:if="{{cartGoods.length == 0}}">购物车为空~</view>
+<view class="cart-list">
+  <view class="shop-item" wx:for="{{cartGoods}}" wx:key='index'>
+    <view class="item-selector">
+      <view class="icon-selector {{item.checked?'selector-active':''}}" bind:tap='goodsClick' data-id='{{item.id}}'>
+        <image src="/assets/cart/tick.svg" style="width:100%;height:100%;"/>
+      </view>
+    </view>
+    <view class="item-img">
+      <image src="{{item.imgUrl}}" class='image'/>
+    </view>
+    <view class="item-info">
+      <view class="item-title">{{item.title}}</view>
+      <view class="item-desc">商品描述: {{item.desc}}</view>
+      <view class="info-bottom">
+        <view class="item-price left">总价：¥{{item.price * item.count}}</view>
+        <view class="item-count right">数量：x{{item.count}}</view>
+      </view>
+    </view>
+  </view>
+</view>

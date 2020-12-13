@@ -1,0 +1,7 @@
+<view class="category-list">
+  <scroll-view class="category-list-scroll" scroll-y>
+    <view wx:for="{{categoryList}}" wx:key='index' bind:tap="itemClick" class="category-item {{currentIndex == index?'active':''}}" data-index='{{index}}'>
+      {{item.title}}
+    </view>
+  </scroll-view>
+</view>

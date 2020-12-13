@@ -1,66 +1,31 @@
-// pages/category/category.js
+import {getCategoryData,getSubcategory} from '../../service/category'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    categoryList: [],
+    subCategoryList:[],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    this._getCategory()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  _getCategory(){
+    // 获取分类列表信息
+    getCategoryData().then((res)=>{
+      this.setData({
+        categoryList:res.data.data.category.list
+      })
+      getSubcategory(this.data.categoryList[0].maitKey).then((res)=>{
+        this.setData({
+          subCategoryList:res.data.data.list
+        })
+      });
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  cateItemClick(a){
+    const index = a.detail.index;
+    getSubcategory(this.data.categoryList[index].maitKey).then((res)=>{
+      this.setData({
+        subCategoryList:res.data.data.list
+      })
+    });
   }
 })

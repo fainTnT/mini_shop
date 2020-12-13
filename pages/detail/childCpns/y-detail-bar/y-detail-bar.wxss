@@ -1,5 +1,5 @@
 .bottom-bar {
-  height: 116rpx;
+  height: 90rpx;
   position: fixed;
   background-color: #eee;
   left: 0;
@@ -23,7 +23,7 @@
 .bar-right {
   font-size: 30rpx;
   color: #fff;
-  line-height: 116rpx;
+  line-height: 90rpx;
 }
 .bar-right .cart {
   width:50%;
@@ -35,6 +35,6 @@
   background-color: #f69;
 }
 .image {
-  width:60rpx;
-  height:60rpx;
+  width:50rpx;
+  height:50rpx;
 }

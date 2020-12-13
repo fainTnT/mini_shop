@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "y-cate-list":"./childCpns/y-cate-list/y-cate-list",
+    "y-cate-main":"./childCpns/y-cate-main/y-cate-main"
+  },
+  "navigationBarTitleText": "分类"
 }

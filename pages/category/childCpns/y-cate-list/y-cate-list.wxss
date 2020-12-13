@@ -1,0 +1,21 @@
+.category-list {
+  width:25%;
+  height:100vh;
+  background-color: #eee;
+  float: left;
+}
+.category-list-scroll {
+  width:100%;
+  height:100%;
+}
+.category-item {
+  width:100%;
+  height:80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-bottom:2rpx solid #fff;
+}
+.active {
+  background-color: #fff;
+  color:#ff5777;
+}

@@ -13,4 +13,4 @@
 <!-- 回到顶部 -->
 <y-backtop wx:if='{{isShowBack}}'></y-backtop>
 <!-- 底部加入购物车 -->
-<y-detail-bar></y-detail-bar>  
+<y-detail-bar bind:cartClick='addCartClick'></y-detail-bar>  

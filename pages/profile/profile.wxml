@@ -1,2 +1,19 @@
-<!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view class="profile">
+  <view class='userInfo'>
+    <view class='icon'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+    </view>
+    <view class='name'>用户昵称：<text>{{userInfo.nickName}}</text></view>
+    <view class='loacl'>所在地：<text>{{userInfo.country}} {{userInfo.province}} {{userInfo.city}}</text></view>
+  </view>
+  <view class='box1'>我的收货地址</view>
+  <view class='box1'>账户安全</view>
+  <view class='box1'>支付设置</view>
+  <view class='box1'>地区设置</view>
+  <view class='box1'>隐私</view>
+  <view class='box1'>通用</view>
+  <view class='box1'>问题反馈</view>
+  <view class='box1'>关于</view>
+  <button class='btn1'>切换用户</button>
+  <button class='btn2'>退出登录</button>
+</view>

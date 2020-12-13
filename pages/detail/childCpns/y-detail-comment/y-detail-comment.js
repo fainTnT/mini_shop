@@ -6,7 +6,7 @@ Component({
   properties: {
     commentInfo:{
       type:Object,
-      value:{}
+      value:{},
     }
   },
   data: {
@@ -30,18 +30,16 @@ Component({
         })
     }
   },
-  lifetimes:{
-    ready(){
-      setTimeout(()=>{
-        // 判断评论是否为空
-        if(Object.keys(this.properties.commentInfo).length !== 0){
-          let timer = this.properties.commentInfo.created * 1000;
-          this.dateFormat(timer);
-          this.setData({
-            isShowComment:true
-          })
-        }
-      },500)
+  observers:{
+    commentInfo:function(a){
+      // 判断评论是否为空
+      if(Object.keys(a).length !== 0){
+        let timer = this.properties.commentInfo.created * 1000;
+        this.dateFormat(timer);
+        this.setData({
+          isShowComment:true
+        })
+      }
     }
   }
 })

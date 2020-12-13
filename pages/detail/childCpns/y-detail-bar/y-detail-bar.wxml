@@ -1,16 +1,16 @@
 <view class="bottom-bar">
   <view class="bar-item bar-left">
     <view class='box'>
-      <view class="text">客服</view>
       <image src='/assets/detail/kefu.png' class='image'></image>
+      <view class="text">客服</view>
     </view>
     <view class='box'>
-      <view class="text">店铺</view>
       <image src='/assets/detail/dianpu.png' class='image'></image>
+      <view class="text">店铺</view>
     </view>
     <view class='box'>
-      <view class="text">收藏</view>
       <image src='/assets/detail/shoucang.png' class='image'></image>
+      <view class="text">收藏</view>
     </view>
   </view>
   <view class="bar-item bar-right">

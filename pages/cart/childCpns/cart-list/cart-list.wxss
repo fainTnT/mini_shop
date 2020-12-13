@@ -1,0 +1,66 @@
+.shop-item {
+  width: 100%;
+  display: flex;
+  font-size: 0;
+  padding: 10rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+.item-selector {
+  width: 14%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-title, .item-desc {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.item-img {
+  padding: 10rpx;
+  /*border: 1rpx solid #ccc;*/
+}
+.item-img .image {
+  width: 160rpx;
+  height: 200rpx;
+  display: block;
+  border-radius: 5rpx;
+}
+.item-info {
+  font-size: 34rpx;
+  color: #333;
+  padding: 10rpx 20rpx;
+  position: relative;
+  overflow: hidden;
+}
+.item-info .item-desc {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 30rpx;
+}
+.info-bottom {
+  margin-top: 60rpx;
+  position: absolute;
+  position: relative;
+  bottom: 20rpx;
+  left: 20rpx;
+  right: 20rpx;
+}
+.info-bottom .item-price {
+  color: orangered;
+  position: absolute;
+  right:40rpx;
+}
+.icon-selector {
+  position: relative;
+  margin: 0;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  border: 4rpx solid #ccc;
+  cursor: pointer;
+}
+.selector-active {
+  background-color: #ff8198;
+  border-color: #ff8198;
+}

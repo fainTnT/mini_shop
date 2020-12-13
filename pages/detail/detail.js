@@ -1,3 +1,4 @@
+const appInstance = getApp();
 import {getGoodsDetail,Goods,Shop,getRecommend} from "../../service/detail"
 Page({
   data: {
@@ -62,5 +63,23 @@ Page({
       imageUrl:'http:'+this.data.swiperImg[0],
       path:''
     }
+  },
+  // 加入购物车
+  addCartClick(){
+    const product = {};
+    const gData = appInstance.globalData.cart;
+    product.id = this.data.id;
+    product.title = this.data.goods.title;
+    product.imgUrl = this.data.swiperImg[0];
+    product.desc = this.data.goods.desc;
+    product.price = this.data.goods.nowPrice;
+    product.checked = true;
+    let oldGood = gData.find(item => item.id === product.id)
+    if(!oldGood){
+      product.count = 1;
+      gData.push(product);
+    }else {
+      oldGood.count += 1
+    } 
   }
 })

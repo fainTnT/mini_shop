@@ -1,1 +1,60 @@
-/* pages/profile/profile.wxss */
+.profile {
+  background-color: #eee;
+  padding-bottom:100rpx;
+}
+.userInfo {
+  position: relative;
+  height:220rpx;
+  background-color: #fff;
+  border-bottom:2rpx solid #ccc;
+}
+.userInfo .icon {
+  position: relative;
+  left:20rpx;
+  top:10rpx;
+  width:180rpx;
+  height:180rpx;
+  border-radius: 50%;
+  border: 4rpx solid #ff5777;
+  overflow: hidden;
+}
+.userInfo .icon image {
+  width:100%;
+  height:100%;
+}
+.userInfo .name {
+  position: absolute;
+  left:230rpx;
+  top:50rpx;
+}
+.userInfo .loacl {
+  position: absolute;
+  left:230rpx;
+  top:100rpx;
+}
+.box1 {
+  height:100rpx;
+  background-color: #fff;
+  padding-left:20rpx;
+  line-height: 100rpx;
+}
+.box1:nth-child(3) {
+  margin:20rpx 0;
+}
+.box1:nth-child(4) {
+  margin:20rpx 0;
+}
+.box1:nth-child(8){
+  margin-top:20rpx;
+}
+.btn1{
+  margin:20rpx 0;
+  background-color: #fff;
+}
+.btn2 {
+  background-color: #fff;
+}
+.box1:nth-child(5),.box1:nth-child(6),.box1:nth-child(8){
+  border-bottom:2rpx solid #ccc;
+}
+

@@ -1,66 +1,49 @@
-// pages/cart/cart.js
+const appInstance = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    cartGoods:[],
+    allCount:0,
+    allPrice:0,
+    allCheck:true,
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onShow: function (options) {
+    const cartList = appInstance.globalData.cart;
+    if(cartList.length != 0){
+      this._setData(cartList);
+    }
+    // 
+    this.setData({
+      cartGoods:appInstance.globalData.cart
+    })   
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  chooseClick(a){
+    const id = a.detail.id;
+    const cartList = appInstance.globalData.cart;
+    const oldGood = cartList.find(item => item.id === id);
+    oldGood.checked = !oldGood.checked;
+    this._setData(cartList);
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  checkClick(a){
+    if(a.detail.isCheck){
+    const cartList = appInstance.globalData.cart;
+    cartList.map(item => item.checked = false);
+    this._setData(cartList);
+    }else {
+      const cartList = appInstance.globalData.cart;
+      cartList.map(item => item.checked = true);
+      this._setData(cartList);
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  _setData(cartList){
+    const allCheck = cartList.some(item => !item.checked)
+    const checkList = cartList.filter(item => item.checked)
+    const counts = checkList.reduce((pre,item)=>pre+item.count,0);
+    const price = checkList.reduce((pre,item)=>pre+(item.price*item.count),0);
+    this.setData({
+      cartGoods:appInstance.globalData.cart,
+      allCount:counts,
+      allPrice:price,
+      allCheck:!allCheck,
+    })  
   }
 })

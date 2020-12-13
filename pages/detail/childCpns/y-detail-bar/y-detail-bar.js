@@ -1,4 +1,4 @@
-// pages/detail/childCpns/y-detail-bar/y-detail-bar.js
+
 Component({
   properties: {
 
@@ -8,7 +8,12 @@ Component({
   },
   methods: {
     cartClick(){
-      console.log(1)
+      wx.showToast({
+        title: '正在加入购物车',
+        icon:'loading',
+        duration:250
+      });
+      this.triggerEvent('cartClick',{})
     }
   }
 })
